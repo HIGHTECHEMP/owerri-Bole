@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order | Owerri Bole</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-flex">
+    <h1 class="logo">Owerri Bole</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="menu">
+  <div class="container">
+    <h2 class="section-title">Order Your Food</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole1.jpg" alt="bole & fish"></div>
+        <h4>Bole & Grilled Fish</h4>
+        <p>₦2500</p>
+        <input type="number" min="1" value="1" id="item1" />
+        <button class="btn primary small-btn" onclick="addToCart('Bole & Grilled Fish', 2500, 'item1')">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole2.jpg" alt="bole & chicken"></div>
+        <h4>Bole & Grilled Chicken</h4>
+        <p>₦2200</p>
+        <input type="number" min="1" value="1" id="item2" />
+        <button class="btn primary small-btn" onclick="addToCart('Bole & Grilled Chicken', 2200, 'item2')">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole3.jpg" alt="ukwa & grilled fish"></div>
+        <h4>Ukwa & Grilled Fish</h4>
+        <p>₦3000</p>
+        <input type="number" min="1" value="1" id="item3" />
+        <button class="btn primary small-btn" onclick="addToCart('Ukwa & Grilled Fish', 3000, 'item3')">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole4.jpg" alt="nkwobi"></div>
+        <h4>Nkwobi</h4>
+        <p>₦2800</p>
+        <input type="number" min="1" value="1" id="item4" />
+        <button class="btn primary small-btn" onclick="addToCart('Nkwobi', 2800, 'item4')">Add</button>
+      </div>
+
+    </div>
+
+    <!-- CART -->
+    <div class="cart-box">
+      <h3>Your Cart</h3>
+      <ul id="cartItems"></ul>
+      <h4>Total: ₦<span id="total">0</span></h4>
+      <a href="checkout.html" class="btn primary full">Proceed to Checkout</a>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
