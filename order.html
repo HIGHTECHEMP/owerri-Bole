@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order | Owerri Bole</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-flex">
+    <h1 class="logo">Owerri Bole</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<button class="floating-cart" onclick="openCartPage()">
+  🛒 <span id="cartCount">0</span>
+</button>
+
+<section class="menu">
+  <div class="container">
+    <h2 class="section-title">Order Your Food</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole1.jpg" alt="bole & fish"></div>
+        <h4>Bole & Grilled Fish</h4>
+        <p>₦2500</p>
+        <div class="qty-wrapper">
+  <button class="qty-btn minus" onclick="changeQty(this, -1)">−</button>
+  <input type="number" min="1" value="1" class="qty-input" />
+  <button class="qty-btn plus" onclick="changeQty(this, 1)">+</button>
+</div>
+
+        <button class="btn primary small-btn"
+  onclick="addToCart(this, 'Bole & Grilled Fish', 2500)">
+  Add
+</button>
+
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole2.jpg" alt="bole & chicken"></div>
+        <h4>Bole & Grilled Chicken</h4>
+        <p>₦2200</p>
+        <div class="qty-wrapper">
+  <button class="qty-btn minus" onclick="changeQty(this, -1)">−</button>
+  <input type="number" min="1" value="1" class="qty-input" />
+  <button class="qty-btn plus" onclick="changeQty(this, 1)">+</button>
+</div>
+
+        <button class="btn primary small-btn"
+  onclick="addToCart(this, 'Bole & Grilled Chicken', 2200)">
+  Add
+</button>
+
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole3.jpg" alt="ukwa & grilled fish"></div>
+        <h4>Ukwa & Grilled Fish</h4>
+        <p>₦3000</p>
+       <div class="qty-wrapper">
+  <button class="qty-btn minus" onclick="changeQty(this, -1)">−</button>
+  <input type="number" min="1" value="1" class="qty-input" />
+  <button class="qty-btn plus" onclick="changeQty(this, 1)">+</button>
+</div>
+
+       <button class="btn primary small-btn"
+  onclick="addToCart(this, 'Ukwa & Grilled Fish', 3000)">
+  Add
+</button>
+
+      </div>
+
+      <div class="menu-card">
+        <div class="menu-img"><img src="images/bole4.jpg" alt="nkwobi"></div>
+        <h4>Nkwobi</h4>
+        <p>₦2800</p>
+        <div class="qty-wrapper">
+  <button class="qty-btn minus" onclick="changeQty(this, -1)">−</button>
+  <input type="number" min="1" value="1" class="qty-input" />
+  <button class="qty-btn plus" onclick="changeQty(this, 1)">+</button>
+</div>
+
+       <button class="btn primary small-btn"
+  onclick="addToCart(this, 'Nkwobi', 2800)">
+  Add
+</button>
+
+      </div>
+
+    </div>
+
+    <!-- CART -->
+   <div class="cart-box hidden" id="cartBox">
+    <button class="btn small-btn" onclick="toggleCart()">← Back</button>
+
+  <h3>Your Cart</h3>
+  <ul id="cartItems"></ul>
+  <h4>Total: ₦<span id="total">0</span></h4>
+  <a href="checkout.html" class="btn primary full">Proceed to Checkout</a>
+
+</div>
+
+
+  </div>
+</section>
+
+<div id="toast" class="toast hidden">Added to cart ✅</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

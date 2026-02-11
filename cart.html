@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | Owerri Bole</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-flex">
+    <button class="back-btn" onclick="goBack()">&#x276e;</button>
+    <h1 class="logo">Owerri Bole</h1>
+  </div>
+</header>
+
+<h2 style="text-align:center;margin:20px">Your Cart</h2>
+
+<div class="container">
+  <div id="cartPageItems"></div>
+
+  <h3>Total: ₦<span id="cartPageTotal">0</span></h3>
+
+  <a href="checkout.html" class="btn primary full">Proceed to Checkout</a>
+</div>
+
+<script src="script.js"></script>
+<script>
+  renderCartPage();
+   updateCartCount();
+</script>
+</body>
+</html>
