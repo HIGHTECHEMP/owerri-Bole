@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWERI-BOLE | Authentic Igbo Cuisine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231A1A1A'/%3E%3Ccircle cx='50' cy='55' r='30' fill='none' stroke='%23D35400' stroke-width='4'/%3E%3Cpath d='M35 40 L65 40 L60 75 L40 75 Z' fill='%23D35400'/%3E%3Cpath d='M45 30 Q50 15 55 30' fill='none' stroke='%23F39C12' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M50 25 L50 20' stroke='%23F39C12' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='55' r='8' fill='%23F39C12'/%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-fire"></i>
+            OWERRI<span>BOLE</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        
+        <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-plate"></div>
+        <div class="floating-plate"></div>
+        <div class="floating-plate"></div>
+        <div class="hero-content">
+            <h1>OWERI-BOLE <span>Authentic Igbo Cuisine</span></h1>
+            <p>Experience the rich flavors of Owerri. From our signature fire-roasted plantains to the legendary Ofe Owerri soup, taste the heritage of Eastern Nigeria.</p>
+            <div class="cta-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-utensils"></i> Order Now
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <i class="fas fa-play"></i> Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="video-container">
+            <video autoplay muted loop>
+            <source src="video1.mp4" alt="Traditional Nigerian Cooking">
+            </video>
+        </div>
+        <div class="about-content">
+            <h2>Taste of <span>Owerri</span></h2>
+            <p>OWERI-BOLE brings the authentic street food culture of Owerri, Imo State to your table. Our signature Bole (fire-roasted plantain) is prepared using traditional charcoal methods passed down through generations.</p>
+            <p>From the famous Ofe Owerri - the "King of Soups" made with ugu, okazi, and cocoyam thickener - to Nkwobi (spicy cow foot delicacy), every dish tells a story of Igbo culinary excellence.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-fire-alt"></i>
+                    <h3>Charcoal Roasted</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Fresh Ingredients</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Authentic Recipes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-header scroll-reveal" data-animation="menu-header">
+            <h2>Our Menu</h2>
+            <p>Discover our selection of traditional Igbo delicacies, from street food favorites to ceremonial dishes</p>
+        </div>
+
+        <div class="menu-tabs scroll-reveal" data-animation="menu-tabs">
+            <button class="tab-btn active" onclick="filterMenu('all')">All</button>
+            <button class="tab-btn" onclick="filterMenu('signaturebole')">Bole & Roasts</button>
+            <button class="tab-btn" onclick="filterMenu('soups')">Soups & Local Delicacies</button>
+            <button class="tab-btn" onclick="filterMenu('specials')">Special Delicacies</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section class="specials" id="specials">
+        <h2 class="scroll-reveal" data-animation="specials-title">Why Choose OWERI-BOLE?</h2>
+        <div class="specials-grid">
+             <div class="special-card scroll-reveal" data-animation="special-card" data-index="0">
+                <i class="fas fa-fire"></i>
+                <h3>Traditional Cooking</h3>
+                <p>We use authentic charcoal fire roasting techniques for that signature smoky flavor you can't replicate.</p>
+            </div>
+            <div class="special-card scroll-reveal" data-animation="special-card" data-index="1">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Cultural Heritage</h3>
+                <p>Every recipe preserves the culinary traditions of Owerri, from Ofe Owerri to Nkwobi preparations.</p>
+            </div>
+            <div class="special-card scroll-reveal" data-animation="special-card" data-index="1">
+                <i class="fas fa-clock"></i>
+                <h3>Fresh Daily</h3>
+                <p>Our vegetables (ugu, okazi, uziza) and plantains are sourced fresh every morning from local markets.</p>
+            </div>
+            <div class="special-card scroll-reveal" data-animation="special-card" data-index="1">
+                <i class="fas fa-users"></i>
+                <h3>Community</h3>
+                <p>We support local farmers and suppliers, keeping the authentic food chain alive within our community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header scroll-reveal" data-animation="testimonial-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from food lovers experiencing authentic Igbo cuisine</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial scroll-reveal" data-animation="testimonial-card" data-index="0">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"The Ofe Owerri here is exactly like my grandmother used to make in Imo State. The cocoyam thickener is perfect and the ugu leaves are so fresh!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CN</div>
+                    <div class="author-info">
+                        <h4>Chioma N.</h4>
+                        <span>Lagos, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial scroll-reveal" data-animation="testimonial-card" data-index="1">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Finally, authentic bole with the real charcoal taste! Paired with their spicy groundnut sauce, it takes me back to Owerri streets. Absolutely divine."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">EK</div>
+                    <div class="author-info">
+                        <h4>Emeka K.</h4>
+                        <span>Abuja, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial scroll-reveal" data-animation="testimonial-card" data-index="1">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"The Nkwobi is incredibly tender and flavorful. Best I've had outside of an Igbo wedding. Their attention to traditional spices like ehuru and utazi is impressive."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AO</div>
+                    <div class="author-info">
+                        <h4>Adaobi O.</h4>
+                        <span>Port Harcourt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>OWERI-BOLE</h3>
+                <p>Bringing the authentic taste of Owerri's street food culture to the world. Every dish is a celebration of Igbo heritage.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trinity Plaza, Owerri, Imo State</p>
+                <p><i class="fas fa-phone"></i> +234 803 123 4567</p>
+                <p><i class="fas fa-envelope"></i> hello@owerribole.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sun: 8am - 10pm</p>
+            </div>
+            <!-- <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for special offers and updates on traditional cooking classes.</p>
+                <form onsubmit="event.preventDefault(); showNotification('Thank you for subscribing!');">
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <input type="email" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Subscribe</button>
+                </form>
+            </div> -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OWERI-BOLE. All rights reserved. Taste the Heritage.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-basket"></i> Your Order</h2>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-basket-shopping"></i>
+                <p>Your basket is empty</p>
+                <p style="font-size: 0.875rem; margin-top: 0.5rem;">Add some delicious Igbo delicacies!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₦0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()" disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeCheckout()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Complete Your Order</h2>
+            
+            <div class="order-summary" id="orderSummary">
+                <h3>Order Summary</h3>
+                <div id="summaryItems"></div>
+                <div class="summary-total">
+                    <span>Total Amount:</span>
+                    <span id="summaryTotal">₦0</span>
+                </div>
+            </div>
+
+            <form id="checkoutForm" onsubmit="processOrder(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" required placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" required placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+234 800 000 0000">
+                </div>
+
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <textarea rows="3" required placeholder="Enter your full delivery address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Delivery Method</label>
+                    <select required>
+                        <option value="">Select delivery method</option>
+                        <option value="delivery">Home Delivery (₦1,500)</option>
+                        <option value="pickup">Pickup from Restaurant (Free)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="payment-methods">
+                        <div class="payment-method active" onclick="selectPayment(this, 'card')">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Card</span>
+                        </div>
+                        <div class="payment-method" onclick="selectPayment(this, 'transfer')">
+                            <i class="fas fa-university"></i>
+                            <span>Transfer</span>
+                        </div>
+                        <div class="payment-method" onclick="selectPayment(this, 'cash')">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Cash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Instructions (Optional)</label>
+                    <textarea rows="2" placeholder="Any allergies or special requests?"></textarea>
+                </div>
+
+                <button type="submit" class="checkout-btn" style="margin-top: 1rem;">
+                    <i class="fas fa-lock"></i> Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+      <div class="floating-cart" onclick="toggleCart()" >
+    <i class="fas fa-shopping-basket"></i>
+    <span class="cart-count" id="cartCount">0</span>
+</div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Item added to cart!</span>
+    </div>
+
+   
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
